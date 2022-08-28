@@ -39,7 +39,7 @@ type Props = {
           <li key={blog.id}>
             <h2 className='text-3xl'>{blog.title}</h2>
             <h3>{blog.createdAt}</h3>
-            <p className='border-b-2 text-2xl'>{blog.body}</p>
+            <p className='border-b-2 text-2xl'>{blog.content}</p>
           </li>
           ))}
         </ul>
