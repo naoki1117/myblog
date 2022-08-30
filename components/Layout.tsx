@@ -69,7 +69,7 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
                                     /> 
                                     }
                                         component={NextLink}
-                                        href="/leearning"
+                                        href="/learning"
                                     >
                                         leearning
                                     </Menu.Item>
@@ -99,7 +99,7 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
 
             </Grid.Col>
             <Grid.Col md={4} className="cs:border-l-2 md:border-t-2">
-                <p className='text-3xl font-bold font-serif'>おすすめリンク</p>
+                <p className='text-3xl font-bold font-serif m-3'>おすすめリンク</p>
             </Grid.Col>
             
         </Grid>
