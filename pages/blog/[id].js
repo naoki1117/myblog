@@ -38,11 +38,11 @@ export default function BlogId({ blog }) {
                         dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
                         
                     ></div>
-                    <Image className="m-20" 
+                    {/* <Image className="m-20" 
                     radius="md"
                     alt="not_image"
                     src={blog.image.url}
-                    />
+                    /> */}
                 </Text>
             </Paper>
         </main>
