@@ -38,10 +38,10 @@ type Props = {
         <h1 className='text-3xl font-bold text-center font-serif m-5'>ブログ</h1>
         
           {blogs.map((blog)=>(
-            <Paper className='m-5' shadow="xl" p="xl"  withBorder>
+            <Paper key={blog.id} className='m-5' shadow="xl" p="xl"  withBorder>
               <Text  className="m-7 text-3xl bg-">
                 <ul>
-                  <li key={blog.id}>
+                  <li >
                     <Link  href={`/blog/${blog.id}`}>
                       <a href="">{blog.title}</a>
                     </Link>
