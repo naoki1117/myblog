@@ -2,8 +2,7 @@ import { Layout } from "../../components/Layout";
 import { client } from "../../src/libs/client";
 import { format } from "date-fns"
 import { Paper,Text,Image } from "@mantine/core";
-
-
+import styles from "../../styles/styles.css"
 //SSG
 export const getStaticProps = async (context) => {
   const id = context.params.id;
