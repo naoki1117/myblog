@@ -100,6 +100,10 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
             </Grid.Col>
             <Grid.Col md={4} className="cs:border-l-2 md:border-t-2">
                 <p className='text-3xl font-bold font-serif m-3'>おすすめリンク</p>
+                <div className='flex flex-col'>
+                    <a className='m-2 text-lg cursor-pointer hover:text-red-400' href='https://qiita.com/'>Qiita_エンジニアの為の情報コミュニティ</a>
+                    <a className='m-2 text-lg cursor-pointer hover:text-red-400' href='https://zenn.dev/'>Zenn_エンジニアの為の情報コミュニティ</a>
+                </div>
             </Grid.Col>
             
         </Grid>
