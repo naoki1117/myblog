@@ -29,7 +29,7 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
                         <Link href="/learning">
                             <a className='text-gray-300 hover:bg-gray-700 delay-100 hover:text-blue-500 transition-all duration-200 rounded-md text-3xl'>learning</a>
                         </Link>
-                        <Link href="/contacts">
+                        <Link href="/history">
                             <a className='text-gray-300 hover:bg-gray-700 delay-100 hover:text-blue-500 transition-all duration-200 rounded-md text-3xl'>history</a>
                         </Link>
                     </div>
