@@ -6,8 +6,8 @@ import {Component}  from "../components/gsap"
 const learning = () => {
   return (
     <Layout title='learning'>
-      aaa
-      <Component />
+      <Component>aaaa
+      </Component>
     </Layout>
   )
 }

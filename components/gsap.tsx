@@ -1,10 +1,13 @@
-import { FC, ReactElement, useEffect } from 'react'
+import { FC, ReactElement, ReactNode, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { NextPage } from 'next'
 
+interface Props {
+  children:ReactNode
+}
 
-export const Component:FC = () => {
+export const Component:FC<Props> = ({children}) => {
   useEffect(() => {
     
       gsap.registerPlugin(ScrollTrigger)
@@ -36,7 +39,7 @@ export const Component:FC = () => {
   }
   return (
     <div className="wrapper" id="wrapper-a">
-      <p>TEST ANIMATION</p>
+      <p>{children}</p>
     </div>
   )
 }
