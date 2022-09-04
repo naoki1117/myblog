@@ -82,9 +82,9 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
                                     /> 
                                     }
                                         component={NextLink}
-                                        href="/contacts"
+                                        href="/history"
                                     >
-                                        contacts
+                                        history
                                 </Menu.Item>
                             </Menu.Dropdown>
                         </Menu>

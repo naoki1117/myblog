@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout'
 
 const contacts:NextPage = () => {
   return (
-    <Layout title='contacts'>
+    <Layout title='history'>
       ffwwfd
     </Layout>
   )
