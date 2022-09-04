@@ -5,7 +5,7 @@ export const Animation = () => {
     
 const boxRef = useRef();
 useEffect(() => {
-  gsap.to(boxRef.current, { rotation: "+=280" });
+  gsap.to(boxRef.current, { rotation: "+=360" });
 },[]);
 
 // DOM to render
