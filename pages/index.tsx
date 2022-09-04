@@ -9,6 +9,7 @@ import type { Blog, Tag } from "../src/types/blog";
 import { Paper,Text } from '@mantine/core';
 import { format } from 'date-fns';
 
+
 export const getStaticProps = async () => {
   const blog = await client.get({ endpoint: "blogs" });
   const tag = await client.get({ endpoint: "tag" });
@@ -34,7 +35,6 @@ type Props = {
   return (
     <Layout title='home' >
       <div>
-        
         <h1 className='text-3xl font-bold text-center font-serif m-5'>Tech Blog</h1>
         
           {blogs.map((blog)=>(

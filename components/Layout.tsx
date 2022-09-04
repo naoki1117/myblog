@@ -6,6 +6,7 @@ import { Button,Grid, Menu } from '@mantine/core'
 import { Activity } from 'tabler-icons-react';
 import { Menu2,Home2,ArrowBigUpLine,MailFast } from 'tabler-icons-react';
 import { NextLink } from '@mantine/next'
+import {Animation} from "../components/animation"
 
 interface Props {
     title:string,
@@ -17,9 +18,8 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
     <div className='flex flex-col justify-center items-center min-h-screen text-white  text-sm font-mono '>
         <Head>{title}</Head>
         <header >
-            
             <div className='absolute top-4 left-10'>create by Naoki Kimura</div>
-            
+            <Animation />
             <nav className='bg-gray-800 w-screen h-20 mt-5 flex justify-around items-center  '>
                 <div className="">
                     <div className="space-x-20 md:hidden ">

@@ -16,6 +16,6 @@
     "incremental": true,
     // "baseUrl": "src"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog/[id].js", "components/gsap.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/blog/[id].js", "components/gsap.mjs", "pages/test.jsx", "components/animation.jsx", "components/animation.jsx"],
   "exclude": ["node_modules"]
 }
