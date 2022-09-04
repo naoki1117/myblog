@@ -41,7 +41,7 @@ type Props = {
             <Paper key={blog.id} className='m-5' shadow="xl" p="xl"  withBorder>
               <Text  className="m-7 text-3xl bg-">
                 <ul>
-                  <li >
+                  <li className='hover:text-red-400' >
                     <Link  href={`/blog/${blog.id}`}>
                       <a href="">{blog.title}</a>
                     </Link>
