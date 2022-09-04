@@ -35,7 +35,7 @@ type Props = {
     <Layout title='home' >
       <div>
         
-        <h1 className='text-3xl font-bold text-center font-serif m-5'>ブログ</h1>
+        <h1 className='text-3xl font-bold text-center font-serif m-5'>Tech Blog</h1>
         
           {blogs.map((blog)=>(
             <Paper key={blog.id} className='m-5' shadow="xl" p="xl"  withBorder>
