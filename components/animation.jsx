@@ -11,7 +11,7 @@ useEffect(() => {
 // DOM to render
 return (
 <div className='flex justify-end items-center absolute right-2 top-2 '> 
-  <p className="box inline" ref={boxRef}>Hello</p>
+  <p className="box inline " ref={boxRef}>Hello</p>
 </div>
 )
 }

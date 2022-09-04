@@ -2,9 +2,13 @@ import { Layout } from "../../components/Layout";
 import { client } from "../../src/libs/client";
 import { format } from "date-fns"
 import { Paper,Text,Image } from "@mantine/core";
+import { Link } from "next/link";
+import { SmartHome } from "tabler-icons-react";
+import { useRouter } from 'next/router'
 
 //SSG
 export const getStaticProps = async (context) => {
+ 
   const id = context.params.id;
   const data = await client.get({ endpoint: "blogs", contentId: id });
 
@@ -26,17 +30,27 @@ export const getStaticPaths = async () => {
 };
 
 export default function BlogId({ blog }) {
+  const router = useRouter()
   return (
-    <Layout title="blog">
-        <main className="h-screen">
-            <h1 className="text-center m-10">{blog.title}</h1>
+   
+        <main className="h-screen ">
+            <h1 className="m-10 md:flex md:justify-center">{blog.title}</h1>
             <Paper shadow="xl">
                 <Text>
-                    <p className=" text-end">{format (new Date(blog.publishedAt),"yyyy-MM-dd HH:mm:ss")}</p>
-                    <div className="text-center text-4xl"
-                        dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
+                    <p className="mb-5 text-end">更新日:{format (new Date(blog.publishedAt),"yyyy-MM-dd HH:mm:ss")}</p>
+                    <div className=" m-b "
+                        dangerouslySetInnerHTML={{ __html: `${blog.body}`}}
                         
                     ></div>
+                    <SmartHome
+                    size={48}
+                    strokeWidth={2}
+                    color={'#bfa840'}
+                    className="mt-4 m-auto cursor-pointer"
+                    onClick={() =>{
+                      router.push("/")}
+                    }
+                    />
                     {/* <Image className="m-20" 
                     radius="md"
                     alt="not_image"
@@ -45,7 +59,7 @@ export default function BlogId({ blog }) {
                 </Text>
             </Paper>
         </main>
-    </Layout>
+   
   );
 }
 

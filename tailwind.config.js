@@ -6,9 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       backgroundImage: theme => ({
         'hero-pattern': "url('/next-js-ogp.png')",
       })
+      
     },
     screens: {
       'xl': {'max': '1279px'},
@@ -24,6 +28,7 @@ module.exports = {
       // => @media (max-width: 639px) { ... }
       'cs': {'min': '768px', 'max': '2000px'}
     }
+    
   },
   plugins: [],
 }

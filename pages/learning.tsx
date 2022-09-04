@@ -6,7 +6,9 @@ import {Component}  from "../components/gsap"
 const learning = () => {
   return (
     <Layout title='learning'>
-      <Component>aaaa
+      <Component>
+        <h2>*comming soon...*</h2>
+        <p>IT系youtube動画(自作、他作問わず)掲載予定</p>
       </Component>
     </Layout>
   )
