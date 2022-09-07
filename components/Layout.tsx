@@ -119,8 +119,8 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          {/* <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" /> */}
-          <Image  src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          {/* <Image  src="/vercel.svg" alt="Vercel Logo" className='text-white' width={72} height={16} /> */}
         </a>
         </footer>
     </div>

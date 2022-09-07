@@ -38,15 +38,15 @@ type Props = {
   return (
     <Layout title='home' >
       <div>
-        <h1 className='text-3xl font-bold text-center font-serif m-5'>Tech Blog</h1>
+        <h1 className='text-3xl font-bold text-center font-serif m-5 cs:animate-tracking-in-contract-bck'>Tech Blog</h1>
           
           {blogs.map((blog)=>(
             <Paper key={blog.id} className='m-5 hover:scale-110' shadow="xl" p="xl"  withBorder>
               <Text  className="m-7 text-3xl animate-fade-in-left">
                 <ul>
-                  <li className='hover:text-red-400' >
+                  <li className='hover:text-red-400 p-14' >
                     <Link  href={`/blog/${blog.id}`} >
-                      <a href="" className='p-full flex'>{blog.title}</a>
+                      <a href="" className=''>{blog.title}</a>
                     </Link>
                   </li>
                 </ul> 
