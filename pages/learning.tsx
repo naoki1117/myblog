@@ -3,7 +3,7 @@ import { Layout } from '../components/Layout'
 import {Component}  from "../components/gsap"
 
 
-const learning = () => {
+const learning:NextPage = () => {
   return (
     <Layout title='learning'>
       <Component>

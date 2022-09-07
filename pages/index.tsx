@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import { Layout } from '../components/Layout'
 import Link from "next/link";
 import type { InferGetStaticPropsType} from "next";
 import { client } from "../src/libs/client";    
 import type { Blog, Tag } from "../src/types/blog";   
-import { Paper,Text } from '@mantine/core';
+import { Loader, Paper,Text } from '@mantine/core';
 import { format } from 'date-fns';
+import { ArrowBigRightLine } from 'tabler-icons-react';
+
 
 
 export const getStaticProps = async () => {
@@ -31,19 +31,22 @@ type Props = {
   blogs,
   tags,
  }:Props) => {
+  
+
   {console.log(blogs)}
+
   return (
     <Layout title='home' >
       <div>
         <h1 className='text-3xl font-bold text-center font-serif m-5'>Tech Blog</h1>
-        
+          
           {blogs.map((blog)=>(
-            <Paper key={blog.id} className='m-5' shadow="xl" p="xl"  withBorder>
+            <Paper key={blog.id} className='m-5 hover:scale-110' shadow="xl" p="xl"  withBorder>
               <Text  className="m-7 text-3xl bg-">
                 <ul>
                   <li className='hover:text-red-400' >
-                    <Link  href={`/blog/${blog.id}`}>
-                      <a href="">{blog.title}</a>
+                    <Link  href={`/blog/${blog.id}`} >
+                      <a href="" className='p-full flex'>{blog.title}</a>
                     </Link>
                   </li>
                 </ul> 

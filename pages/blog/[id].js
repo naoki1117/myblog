@@ -1,7 +1,7 @@
 import { Layout } from "../../components/Layout";
 import { client } from "../../src/libs/client";
 import { format } from "date-fns"
-import { Paper,Text,Image } from "@mantine/core";
+import { Paper,Text,Image, Loader } from "@mantine/core";
 import { Link } from "next/link";
 import { SmartHome } from "tabler-icons-react";
 import { useRouter } from 'next/router'
@@ -36,7 +36,9 @@ export default function BlogId({ blog }) {
   const router = useRouter()
   return (
     <>
+    
     <div className="">
+    
         <h1 className="m-10 md:flex md:justify-center text-center">{blog.title}</h1>
         
             <p className="mb-5 text-right ">更新日:{format(new Date(blog.publishedAt), "yyyy-MM-dd HH:mm:ss")}</p>
