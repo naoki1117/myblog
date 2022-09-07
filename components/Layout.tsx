@@ -103,7 +103,7 @@ export const Layout:FC<Props> = ({title="nextjs",children}) => {
                 <div className='flex flex-col'>
                     <a className='m-2 underline underline-offset-1 text-lg cursor-pointer hover:text-red-400' href='https://qiita.com/'>Qiita_エンジニアの為の情報コミュニティ</a>
                     <a className='m-2 underline underline-offset-1 text-lg cursor-pointer hover:text-red-400' href='https://zenn.dev/'>Zenn_エンジニアの為の情報コミュニティ</a>
-                    <a className='m-2 underline underline-offset-1 text-lg cursor-pointer hover:text-red-400' href='https://nextjs.org/'>Next.js_React Framework</a>
+                    <a className='m-2 underline underline-offset-1 text-lg cursor-pointer hover:text-red-400' href='https://nextjs.org/'>Next.js_@React Framework</a>
                     <a className='m-2 underline underline-offset-1 text-lg cursor-pointer hover:text-red-400' href='https://tailwindcss.com/'>tailwindcss_@CSSframework</a>
                     <a className='m-2 underline underline-offset-1 text-lg cursor-pointer hover:text-red-400' href='https://ui.mantine.dev/'>Mantine UI</a>
                 </div>
