@@ -42,7 +42,7 @@ type Props = {
           
           {blogs.map((blog)=>(
             <Paper key={blog.id} className='m-5 hover:scale-110' shadow="xl" p="xl"  withBorder>
-              <Text  className="m-7 text-3xl bg-">
+              <Text  className="m-7 text-3xl animate-fade-in-left">
                 <ul>
                   <li className='hover:text-red-400' >
                     <Link  href={`/blog/${blog.id}`} >

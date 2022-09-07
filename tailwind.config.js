@@ -6,14 +6,25 @@ module.exports = {
   ],
   theme: {
     extend: {
-      aspectRatio: {
-        '4/3': '4 / 3',
-      },
-      backgroundImage: theme => ({
-        'hero-pattern': "url('/next-js-ogp.png')",
-      })
+      animation: {
+        "fade-in-left": "fade-in-left 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both"
+    },
+    keyframes: {
+        "fade-in-left": {
+            "0%": {
+                transform: "translateX(-50px)",
+                opacity: "0"
+            },
+            to: {
+                transform: "translateX(0)",
+                opacity: "1"
+            }
+        }
+    }
       
     },
+    
+    
     screens: {
       'xl': {'max': '1279px'},
       // => @media (max-width: 1279px) { ... }
