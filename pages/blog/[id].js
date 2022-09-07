@@ -6,6 +6,9 @@ import { Link } from "next/link";
 import { SmartHome } from "tabler-icons-react";
 import { useRouter } from 'next/router'
 
+
+
+
 //SSG
 export const getStaticProps = async (context) => {
  
@@ -32,34 +35,27 @@ export const getStaticPaths = async () => {
 export default function BlogId({ blog }) {
   const router = useRouter()
   return (
-   
-        <main className="h-screen ">
-            <h1 className="m-10 md:flex md:justify-center">{blog.title}</h1>
-            <Paper shadow="xl">
-                <Text>
-                    <p className="mb-5 text-end">更新日:{format (new Date(blog.publishedAt),"yyyy-MM-dd HH:mm:ss")}</p>
-                    <div className=" m-b "
-                        dangerouslySetInnerHTML={{ __html: `${blog.body}`}}
-                        
-                    ></div>
-                    <SmartHome
-                    size={48}
-                    strokeWidth={2}
-                    color={'#bfa840'}
-                    className="mt-4 m-auto cursor-pointer"
-                    onClick={() =>{
-                      router.push("/")}
-                    }
-                    />
-                    {/* <Image className="m-20" 
-                    radius="md"
-                    alt="not_image"
-                    src={blog.image.url}
-                    /> */}
-                </Text>
-            </Paper>
-        </main>
-   
+    <>
+    <div className="">
+        <h1 className="m-10 md:flex md:justify-center text-center">{blog.title}</h1>
+        
+            <p className="mb-5 text-right ">更新日:{format(new Date(blog.publishedAt), "yyyy-MM-dd HH:mm:ss")}</p>
+            <div className="w-96 cs:w-screen cs:h-screen cs:text-3xl text-center "
+              dangerouslySetInnerHTML={{ __html: `${blog.body}` }}
+            ></div>
+          
+    </div>
+    <footer>
+      <SmartHome
+      size={48}
+      strokeWidth={2}
+      color={'#bfa840'}
+      className="mt-4 m-auto cursor-pointer cs:fixed top-1"
+      onClick={() => {
+        router.push("/");
+      } } />
+    </footer>
+    </>
   );
 }
 
